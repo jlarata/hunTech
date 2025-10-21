@@ -1,0 +1,11 @@
+.main-content {
+  margin-left: 220px; /* Leave space for vertical sidebar */
+  padding: 1rem;
+}
+
+/* On mobile, remove the margin */
+@media (max-width: 768px) {
+  .main-content {
+    margin-left: 0;
+  }
+}
