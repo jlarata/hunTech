@@ -1,0 +1,21 @@
+<div class="perfil-card">
+    <!-- por ahora sin avatar <img [src]="user.avatarUrl" alt="{{ user.name }}" class="avatar" /> -->
+    <h2>{{ userDesarrollador.nombre }} {{userDesarrollador.apellido}}</h2>
+    <p class="email">email: {{ userDesarrollador.email }}</p>
+    <p class="bio">Bio: {{ userDesarrollador.descripcion }}</p>
+
+    <ul class="perfil-details">
+        <li *ngIf="userDesarrollador.rol">Rol Principal: {{ userDesarrollador.rol }}</li>
+    </ul>
+
+    <div *ngIf="userDesarrollador.skills" class="perfil-skills">
+        <div class="perfil-skills-titulo">
+        <h3>Skills</h3>
+        </div>
+        <div class="perfil-skills-skills">
+        <ul *ngFor="let skill of userDesarrollador.skills; let i = index" class="perfil-details">
+            <li>{{ skill }}</li>
+        </ul>
+        </div>
+    </div>
+</div>

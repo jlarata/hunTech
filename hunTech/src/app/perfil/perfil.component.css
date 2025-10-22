@@ -1,0 +1,68 @@
+.perfil-card {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    background-color: #143447;
+    color: white;
+    padding: 2rem;
+    border-radius: 12px;
+    max-width: 80vw;
+    margin: 2rem auto;
+    text-align: center;
+}
+
+
+.avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid #ff0562;
+    margin-bottom: 1rem;
+    object-fit: cover;
+}
+
+h2 {
+    margin: 0.5rem 0;
+    font-size: 1.8rem;
+}
+
+.bio {
+    font-style: italic;
+    color: #ffffffcc;
+}
+
+.perfil-details {
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
+    font-size: 1rem;
+    color: #ff0562;
+}
+
+.perfil-details li {
+    margin-bottom: 0.5rem;
+}
+
+.perfil-skills {
+    display: flex;
+    flex-direction: row;
+}
+
+.perfil-skills-titulo{
+    display: flex;
+    flex-direction: column;
+    padding-right: 2rem;
+    align-items: end;
+    justify-content: center;
+    width: 50%;
+}
+
+.perfil-skills-skills{
+    display: flex;
+    flex-direction: column;
+    padding-left: 1rem;
+    align-items: start;
+    justify-content: center;
+    width: 50%;
+    border-left: solid 1px white;
+}
