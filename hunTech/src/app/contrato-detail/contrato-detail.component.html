@@ -1,0 +1,22 @@
+@if (contrato) {
+  <div>
+  <h2>{{contrato.titulo| uppercase}} Details</h2>
+  <div><span>id: </span> {{contrato.id}}</div>
+  
+  <div class="contrato">
+    <div class="contrato-contents">
+        <p class="">{{contrato.descripcion}}</p>
+        <p class="">{{contrato.start_date}}</p>
+        <p class="">{{contrato.tipo}}</p>
+        <p class="">{{contrato.start_date}}</p>
+        <p class="">{{contrato.end_date}}</p>
+    </div>
+  </div>
+  
+</div>
+}
+@else {
+  <div> no contratos? </div>
+}
+
+<a routerLink="/contratos">volver</a>

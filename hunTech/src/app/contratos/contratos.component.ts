@@ -3,10 +3,11 @@ import { CONTRATOS } from '../mock-contratos';
 import { ContratoCard } from '../models/cards/contrato-card';
 import { CommonModule } from '@angular/common';
 import { Contrato } from '../models/contrato';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-contratos',
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
   templateUrl: './contratos.component.html',
   styleUrl: './contratos.component.css'
 })

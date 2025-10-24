@@ -14,6 +14,9 @@
 }
 
 .contrato-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     background-color: #143447;
     border-radius: 8px;
     width: 300px;
@@ -44,6 +47,7 @@
 } */
 
 .contrato-card-content {
+    
     padding: 1rem;
 }
 
@@ -54,6 +58,27 @@
 
 .contrato-card-content p {
     margin: 0.5rem 0 0;
+}
+
+.card-button-group {
+    height: 3rem;
+    margin-left: 1rem;
+}
+
+.card-button-group button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: large;
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
 }
 
 @media (max-width: 768px) {
