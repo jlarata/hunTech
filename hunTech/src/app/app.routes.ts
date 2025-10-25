@@ -1,17 +1,14 @@
 import { Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
-import { AboutComponent } from './about/about.component';
-import { ProyectosComponent } from './proyectos/proyectos.component';
-import { ContratosComponent } from './contratos/contratos.component';
-import { PerfilComponent } from './perfil/perfil.component';
-import { ContratoDetailComponent } from './contrato-detail/contrato-detail.component';
 
 export const routes: Routes = [
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
-  { path: 'home', component: HomeComponent },
-  { path: 'about', component: AboutComponent },
-  { path: 'proyectos', component: ProyectosComponent },
-  { path: 'contratos', component:ContratosComponent },
-  { path: 'contrato-detail/:id', component: ContratoDetailComponent },
-  { path: 'perfil', component:PerfilComponent }
+  { path: '', component: HomeComponent },
+  { path: 'home', loadComponent: () => import('./home/home.component').then(m => m.HomeComponent) },
+  { path: 'about', loadComponent: () => import('./about/about.component').then(m => m.AboutComponent) },
+  { path: 'proyectos', loadComponent: () => import('./proyectos/proyectos.component').then(m => m.ProyectosComponent) },
+  { path: 'contratos', loadComponent: () => import('./contratos/contratos.component').then(m => m.ContratosComponent) },
+  { path: 'contrato-detail/:id', loadComponent: () => import('./contrato-detail/contrato-detail.component').then(m => m.ContratoDetailComponent) },
+  { path: 'perfil', loadComponent: () => import('./perfil/perfil.component').then(m => m.PerfilComponent) },
+
+  { path: '**', redirectTo:'' }
 ];
