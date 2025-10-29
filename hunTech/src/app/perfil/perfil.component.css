@@ -37,7 +37,7 @@ h2 {
 .email:before {
     content: '';
     position: absolute;
-    width: 50%;
+    width: 55%;
     border-top: 1px solid #ff0562;
     bottom: 2.5rem
 }
@@ -85,6 +85,20 @@ h2 {
 
 @media (max-width: 768px) {
     .perfil-card {
-        max-width: 80vw;
+        max-width: 80vw;    
+    }
+
+    .email {
+        position: relative;
+        font-size: 1.5rem;
+        padding-top: 0.5rem;
+    }
+
+    .email:before {
+        content: '';
+        position: absolute;
+        width: 70%;
+        border-top: 1px solid #ff0562;
+        bottom: 2.5rem
     }
 }

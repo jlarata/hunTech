@@ -13,18 +13,21 @@ import { CommonModule } from '@angular/common';
 export class ContratoDetailComponent {
 
   constructor(private route: ActivatedRoute) { }
-  contratos = CONTRATOS;
   contrato: Contrato;
 
   ngOnInit(): void {
-    this.contrato = this.getContrato()
-    console.log(this.contrato)
+    this.contrato = this.setContrato()
   }
 
-  getContrato(): Contrato {
-    const id = Number(this.route.snapshot.paramMap.get('id'));
-    const contrato = CONTRATOS.filter(c => c.id == id)
-    return contrato[0]
+  setContrato(): Contrato {
+    let contrato: Contrato = new Contrato;
+    contrato.id = Number(this.route.snapshot.paramMap.get('id'));
+    contrato.tipo = String(this.route.snapshot.paramMap.get('tipo'));
+    contrato.titulo = String(this.route.snapshot.paramMap.get('titulo'));
+    contrato.descripcion = String(this.route.snapshot.paramMap.get('desc'));
+    contrato.start_date = String(this.route.snapshot.paramMap.get('sd'));
+    contrato.end_date = String(this.route.snapshot.paramMap.get('ed'));
 
+    return contrato
   }
 }

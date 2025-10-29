@@ -2,6 +2,7 @@ import { Card } from "./card";
 
 export class ContratoCard implements Card {
     id: number;
+    tipo: string;
     titulo: string;
     descripcion: string;
     tiene_postulaciones: boolean;

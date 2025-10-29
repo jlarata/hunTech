@@ -17,6 +17,10 @@ html {
     color: white;
 }
 
+a {
+    text-decoration: none;
+}
+
 a,
 button,
 select {
