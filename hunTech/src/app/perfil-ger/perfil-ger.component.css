@@ -1,7 +1,6 @@
 .perfil-card {
     display: flex;
     flex-direction: column;
-    gap: 3rem;
     background-color: #143447;
     color: white;
     padding: 2rem;
@@ -9,18 +8,9 @@
     max-width: 40vw;
     margin: 2rem auto;
     text-align: center;
+    align-items: center;
 }
 
-
-/* Por ahora sin implementar
-.avatar {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    border: 3px solid #ff0562;
-    margin-bottom: 1rem;
-    object-fit: cover;
-} */
 
 h2 {
     margin: 0.5rem;
@@ -28,20 +18,27 @@ h2 {
     font-size: 3.4rem;
 }
 
-.email {
-    position: relative;
-    font-size: 1.5rem;
-    padding-top: 0.5rem;
+.separador {
+    border-bottom: 1px solid #ff0562;
+    margin-top: 3rem;
+    width: 20vw;
 }
 
-.email:before {
+.descripcion {
+    margin-top: 1rem;
+    position: relative;
+    font-size: 1.5rem;
+}
+
+
+/* .email:before {
     content: '';
     position: absolute;
     width: 80%;
     border-top: 1px solid #ff0562;
     bottom: 2.5rem;
     padding-top: 1.5rem;
-}
+} */
 
 .contratos-card {
     display: flex;
@@ -53,10 +50,16 @@ h2 {
 
 @media (max-width: 768px) {
     .perfil-card {
-        max-width: 80vw;    
+        max-width: 80vw;
     }
 
-    .email {
+    .separador {
+        border-bottom: 1px solid #ff0562;
+        margin-top: 3rem;
+        width: 50vw;
+    }
+
+    /* .email {
         position: relative;
         font-size: 1.5rem;
         padding-top: 0.5rem;
@@ -68,5 +71,5 @@ h2 {
         width: 90%;
         border-top: 1px solid #ff0562;
         bottom: 2.5rem
-    }
+    } */
 }

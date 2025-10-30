@@ -18,14 +18,14 @@
       <p *ngIf="card.end_date">Fecha de finalización del contrato: {{ card.end_date }}</p>
     </div>
     <div class="card-button-group">
-<!--       <a
+      <!--       <a
         [routerLink]="['/contrato-detail', card.id, card.tipo, card.titulo, card.descripcion, card.start_date, card.end_date]">
         <button class="btn btn-signup">+</button>
       </a> -->
 
-      
-        <button class="btn btn-signup" (click)="this.setContratoAMostrar(card)">+</button>
-      
+
+      <button class="btn btn-signup" (click)="this.setContratoAMostrar(card)">+</button>
+
 
     </div>
   </div>
@@ -36,6 +36,8 @@
   }
 </div>
 
-@if (this.mostrandoContratoDetail) {
-<app-contrato-detail [contrato]="this.contratoAMostrarDetail!" [from]="this.from" />
-}
+<div #detailContainer>
+  @if (this.mostrandoContratoDetail) {
+  <app-contrato-detail [contrato]="this.contratoAMostrarDetail!" [from]="this.from" />
+  }
+</div>

@@ -1,10 +1,11 @@
 import { Component, Input } from '@angular/core';
 import { CONTRATOS } from '../mock-contratos';
 import { ContratoCard } from '../models/cards/contrato-card';
-import { CommonModule } from '@angular/common';
+import { CommonModule, ViewportScroller } from '@angular/common';
 import { Contrato } from '../models/contrato';
 import { RouterModule } from '@angular/router';
 import { ContratoDetailComponent } from '../contrato-detail/contrato-detail.component';
+
 
 
 @Component({
@@ -15,6 +16,8 @@ import { ContratoDetailComponent } from '../contrato-detail/contrato-detail.comp
 })
 export class ContratosComponent {
   @Input() from: string = '';
+  constructor(private viewportScroller: ViewportScroller) { }
+
 
   contratos = CONTRATOS
   contratosCards: ContratoCard[] = [];
@@ -24,6 +27,10 @@ export class ContratosComponent {
 
   ngOnInit(): void {
     this.createCards(CONTRATOS);
+  }
+
+  ngAfterViewChecked() {
+    this.scrollToDetail();
   }
 
   createCards = (contratos: Contrato[]): void => {
@@ -54,23 +61,18 @@ export class ContratosComponent {
         this.contratoAMostrarDetail = contrato;
       }
     }
-
-
-
   }
 
+  /* cuando se abre una tarjeta de detalle de contrato, se scrollea la view */
+  scrollToDetail(): void {
+    try {
+      this.viewportScroller.scrollToPosition([0, document.body.scrollHeight]);
+    } catch (err) {
+      console.error('Error scrolling to bottom:', err);
+    }
+  }
 }
 
 
-
-
-
-
-/* cards: Card[] = [
-  new Card('Card One', 'This is the first card.', 'https://via.placeholder.com/300x150'),
-  new Card('Card Two', 'This is the second card.', 'https://via.placeholder.com/300x150'),
-  new Card('Card Three', 'This is the third card.', 'https://via.placeholder.com/300x150')
-];
-*/
 
 
