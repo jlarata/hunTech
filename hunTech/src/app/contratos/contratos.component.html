@@ -1,5 +1,8 @@
+@if (from!='gerente') {
 <h1>Contratos disponibles</h1>
 <hr>
+}
+
 
 <div class="contrato-card-container">
   @for (card of contratosCards; track card.id) {
@@ -15,11 +18,15 @@
       <p *ngIf="card.end_date">Fecha de finalización del contrato: {{ card.end_date }}</p>
     </div>
     <div class="card-button-group">
-      <a [routerLink]="['/contrato-detail', card.id, card.tipo, card.titulo, card.descripcion, card.start_date, card.end_date]">
-      <!-- <a routerLink="/contrato-detail/{{card.id}}"> -->
+<!--       <a
+        [routerLink]="['/contrato-detail', card.id, card.tipo, card.titulo, card.descripcion, card.start_date, card.end_date]">
         <button class="btn btn-signup">+</button>
-      </a>
-      <!-- <button class="btn">▶</button> -->
+      </a> -->
+
+      
+        <button class="btn btn-signup" (click)="this.setContratoAMostrar(card)">+</button>
+      
+
     </div>
   </div>
   }
@@ -28,3 +35,7 @@
     Parece que no hay contratos disponibles para el criterio elegido.</div>
   }
 </div>
+
+@if (this.mostrandoContratoDetail) {
+<app-contrato-detail [contrato]="this.contratoAMostrarDetail!" [from]="this.from" />
+}

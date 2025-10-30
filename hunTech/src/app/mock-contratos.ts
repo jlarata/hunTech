@@ -1,18 +1,18 @@
 import { Contrato } from "./models/contrato";
 
 export const CONTRATOS: Contrato[] = [
-{id: 1,tipo: "Desarrollador backend",titulo:"Desarrollador backend",
-    descripcion: "Necesitamos un desarrollador backend para la web de un vivero. hola, somos viveronia, blablabla datadatadata",
+{id: 1,tipo: "Desarrollador backend",titulo:"Desarrollador backend node con conocimiento de express",
+    descripcion: "Necesitamos un desarrollador backend para la web de un vivero. hola, somos El vivero feliz, blablabla datadatadata",
     tiene_postulaciones: false, postulaciones:["asd", "asdf", "asdfg"] ,esta_ocupado: false,
     pasante_id: undefined, start_date: '2025-11-01', end_date: '2025-12-01' 
 },
-{id: 2,tipo: "Desarrollador frontend",titulo:"desarrollador backend",
-    descripcion: "Necesitamos un desarrollador backend para la web de un vivero. hola, somos viveronia, blablabla datadatadata",
+{id: 2,tipo: "Desarrollador frontend",titulo:"angular frontend",
+    descripcion: "Necesitamos un desarrollador frontend para la web de un vivero. hola, somos El vivero feliz, blablabla datadatadata",
     tiene_postulaciones: false, postulaciones:["asd", "asdf", "asdfg"] ,esta_ocupado: false,
     pasante_id: undefined, start_date: '2025-11-01', end_date: '2025-12-01' 
 },
 {id: 3,tipo: "BBDD Adm.",titulo:"desarrollador de bbdd para la web de un vivero",
-    descripcion: "Necesitamos un administrador de bbdd para la web de un vivero. hola, somos viveronia, blablabla datadatadata",
+    descripcion: "Necesitamos un administrador de bbdd para la web de un vivero. hola, somos El vivero feliz, blablabla datadatadata",
     tiene_postulaciones: false, postulaciones:["asd", "asdf", "asdfg"] ,esta_ocupado: false,
     pasante_id: undefined, start_date: '2025-11-01', end_date: '2025-12-01' 
 }

@@ -1,0 +1,72 @@
+.perfil-card {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    background-color: #143447;
+    color: white;
+    padding: 2rem;
+    border-radius: 12px;
+    max-width: 40vw;
+    margin: 2rem auto;
+    text-align: center;
+}
+
+
+/* Por ahora sin implementar
+.avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid #ff0562;
+    margin-bottom: 1rem;
+    object-fit: cover;
+} */
+
+h2 {
+    margin: 0.5rem;
+    margin-bottom: -2rem;
+    font-size: 3.4rem;
+}
+
+.email {
+    position: relative;
+    font-size: 1.5rem;
+    padding-top: 0.5rem;
+}
+
+.email:before {
+    content: '';
+    position: absolute;
+    width: 80%;
+    border-top: 1px solid #ff0562;
+    bottom: 2.5rem;
+    padding-top: 1.5rem;
+}
+
+.contratos-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+@media (max-width: 768px) {
+    .perfil-card {
+        max-width: 80vw;    
+    }
+
+    .email {
+        position: relative;
+        font-size: 1.5rem;
+        padding-top: 0.5rem;
+    }
+
+    .email:before {
+        content: '';
+        position: absolute;
+        width: 90%;
+        border-top: 1px solid #ff0562;
+        bottom: 2.5rem
+    }
+}

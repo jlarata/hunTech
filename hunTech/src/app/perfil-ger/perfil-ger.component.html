@@ -1,0 +1,20 @@
+
+<div class="perfil-card">
+    <!-- por ahora sin avatar <img [src]="user.avatarUrl" alt="{{ user.name }}" class="avatar" /> -->
+    <h2>Usuario Gerente del proyecto id: {{userGerente.id_proyecto}} </h2>
+    
+    <p class="email">Descripción del proyecto: {{ userGerente.descripcion }}</p>
+   
+    
+</div>
+
+<div class="contratos-card">
+<h1>Mis contratos</h1>
+
+<app-contratos [from]="userType"></app-contratos>
+</div>
+
+<!-- <section class="botonera"> -->
+<!--         <button class="btn btn-signup" routerLink="/contratos">Mis contratos</button> -->
+<!--          -->
+<!--     </section> -->
